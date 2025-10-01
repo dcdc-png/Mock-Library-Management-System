@@ -1,0 +1,91 @@
+main {
+    display: grid;
+    grid-template-columns: 4rem auto 4rem;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 2rem auto 4rem;
+
+    font-size: 1rem;
+    color: whitesmoke;
+ 
+    text-align: center;
+    text-wrap: balance;
+}
+
+th, td {
+    border: 1px solid whitesmoke;
+    padding: 0.4rem;
+}
+
+th { /* i do not condone hardcoding widths, i just wanted it to stay put cus tables are annoying cunts */
+    background-color: #191C1D;
+
+    &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(6) {
+        min-width: 13ch;
+        width: 13ch;
+    }
+
+    &:last-child {
+        min-width: 10ch;
+        width: 10ch;
+    }
+}
+
+tbody {
+    & > tr:nth-child(even) {
+        background-color: #282B2C;
+    }
+
+    & > tr:nth-child(odd) {
+        background-color: #3B3E3F;
+    }
+
+    & td:nth-child(5) > p {
+        text-align: justify;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        width: 40ch;
+
+        @supports (-webkit-line-clamp: 2) { /* https://stackoverflow.com/questions/5269713/css-ellipsis-on-second-line FUCK YEA LMAO */
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            white-space: initial;
+            overflow: hidden;
+
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+    }
+}
+
+.buttons button {
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 0.85rem;
+    margin: 0.15rem 0;
+    padding: .2rem;
+    border-radius: .15rem;
+    /* border: 2px solid #74bbd3; */
+
+    &:active, &:focus-visible, &:hover {
+        background-color: lightblue;
+    }
+}
+
+textarea {
+    height: 10rem;
+    width: 100%;
+
+    padding: 0.2rem;
+}
+
+section header {
+    text-align: center;
+    margin: 1rem auto 0;
+    color: whitesmoke;
+}

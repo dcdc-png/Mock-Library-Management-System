@@ -1,0 +1,58 @@
+.add-form {
+    display: grid;
+    margin: 2rem auto 4rem;
+    width: 500px;
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+
+        & > label {
+            font-size: 0.8rem;
+            padding-left: 0.2rem;
+            order: 1;
+        }
+    
+        & > input {
+            padding: 0.2rem;
+            margin-bottom: 1rem;
+            order: 2;
+    
+            &:read-only {
+                background-color: #bdbdbd;
+                border: 1px solid grey;
+            }
+        }
+    
+        & > textarea {
+            resize: vertical;
+            margin-bottom: 1rem;
+            padding: 0.2rem;
+            height: 10rem;
+            order: 2;
+        }
+    }
+
+    & > button {
+        padding: 0.5rem 2rem;
+        width: min-content;
+        border-radius: 0.2rem;
+        justify-self: center;
+
+        &:active, &:focus-visible, &:hover {
+            background-color: lightblue;
+        }
+    }
+}
+
+section header {
+    text-align: center;
+    margin: 1rem auto 0;
+    color: whitesmoke;
+}
+
+input:required + label:after {
+	content: '*';
+	color: red;
+    padding-left: 0.4ch;
+  }

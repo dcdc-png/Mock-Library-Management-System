@@ -1,0 +1,88 @@
+.book-info {
+    display: grid;
+    grid-template-columns: 2fr 5fr 2fr;
+
+    width: 100ch;
+    margin: 4rem auto 4rem;
+    gap: 1rem;
+
+    color: whitesmoke;
+}
+
+.book-cover, .book-details, .book-misc {
+    border-top: var(--card-top) solid 0.5rem;
+    height: min-content;
+}
+
+.book-details, .book-misc {
+    background-color: black;
+    padding: 1rem 2rem 3.5rem 1.5rem;
+}
+
+.book-title {
+    font-size: 2.5rem;
+}
+
+.book-author {
+    padding: 0.2rem 0 1rem;
+
+    & .book-author-name {
+        color: crimson;
+        font-style: italic;
+        padding-left: 0.2ch;
+    }
+}
+
+.book-summary {
+    text-align: justify;
+    text-indent: 3ch;
+    white-space: pre-wrap;
+}
+
+.book-misc {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 1rem;
+}
+
+.book-misc-header {
+    /* font-family: 'Roboto', sans-serif; */
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+#no-book-found {
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+
+#borrow-button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: whitesmoke;
+    background-color: var(--borrow-button);
+    
+    margin-top: 1.5rem;
+    padding: 1rem 3.5rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--borrow-button-hover);
+    }
+
+    &:disabled {
+        background-color: var(--borrow-button-disabled);
+    }
+}
+
+.book-status {
+    font-style: italic;
+    margin-left: 1rem;
+}
+
+#book-status-no-acc {
+    margin-top: 1.5rem;
+}

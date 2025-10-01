@@ -1,0 +1,55 @@
+/* import fonts etc */
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+:root {
+    --text-bright: rgb(179, 190, 205);
+    --card-top: rgb(157, 20, 226);
+    --card-bg: whitesmoke;
+    --card-details: whitesmoke;
+    --borrow-button: #d8311f;
+    --borrow-button-hover: #c32513;
+    --borrow-button-disabled: #787878;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    color: var(--text-bright);
+
+    background-color: rgb(18, 24, 27);
+    background-image:
+        linear-gradient(
+            176deg,
+            rgb(18, 24, 27) 50%,
+            rgb(32, 39, 55) 100%);
+    background-attachment: fixed;
+
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-corner {
+        background-color: #12181b;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #454e56;
+        border-radius: 9999px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #636f79;
+    }
+}
+
+button {
+    border-width: 0;
+}

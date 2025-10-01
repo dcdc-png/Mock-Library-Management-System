@@ -1,0 +1,22 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    line-height: 1.2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+img, picture, video, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, textarea, button, select{
+    font: inherit;
+}
